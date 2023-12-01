@@ -1,18 +1,9 @@
 print("-------------1ere partie-------------")
-
-def trouvepremier(chaine:str):
-    for i in chaine:
-        if i.isnumeric():
-            return i
-def trouvedernier(chaine:str):
-    for i in reversed(chaine):
-        if i.isnumeric():
-            return i 
-        
+ 
 with open('input.txt', 'r') as fichier:
     sum = 0
     for ligne in fichier:
-        sum += int(f"{trouvepremier(ligne)}{trouvedernier(ligne)}")
+        sum += int(f"{[i for i in ligne if i.isnumeric()][0]}{[i for i in reversed(ligne) if i.isnumeric()][0]}")
 print(sum)
 
 print("-------------2eme partie-------------")
@@ -27,5 +18,5 @@ def remplace(chaine:str):
 with open('input.txt', 'r') as fichier:
     sum = 0
     for ligne in fichier:
-        sum += int(f"{trouvepremier(remplace(ligne))}{trouvedernier(remplace(ligne))}")
+        sum += int(f"{[i for i in remplace(ligne) if i.isnumeric()][0]}{[i for i in reversed(remplace(ligne)) if i.isnumeric()][0]}")
 print(sum)
