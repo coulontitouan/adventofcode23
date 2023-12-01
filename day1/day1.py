@@ -19,4 +19,4 @@ with open('input.txt', 'r') as fichier:
     sum = 0
     for ligne in fichier:
         sum += int(f"{[i for i in remplace(ligne) if i.isnumeric()][0]}{[i for i in reversed(remplace(ligne)) if i.isnumeric()][0]}")
-print(sum)
+print(sum)  
