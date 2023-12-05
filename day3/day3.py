@@ -58,7 +58,7 @@ with open("/Users/livreur/Documents/GitHub/adventofcode23/day3/test.txt", "r") a
                 countmoins -= 1
             while lignes[y][x+countplus].isnumeric():
                 chiffre = f"{chiffre}{lignes[y][x+countplus]}"
-                countplus -= 1
+                countplus += 1
         except IndexError:
             print("a")
         return int(chiffre)
