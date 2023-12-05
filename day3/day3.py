@@ -44,7 +44,7 @@ print(somme)
 
 print("-------------2eme partie-------------")
 
-with open("/Users/livreur/Documents/GitHub/adventofcode23/day3/input.txt", "r") as fichier:
+with open("input.txt", "r") as fichier:
     somme = 0
     y = 0
     lignes = fichier.readlines()
