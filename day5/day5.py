@@ -5,7 +5,9 @@ with open("input.txt", "r") as fichier:
     print(seeds)
     locations = list()
     for ligne in fichier:
-        pass
+        if ligne.contains("-to-"):
+            from,to = ligne.split("-to-")
+            
 print(min(locations))
 
 print("-------------2eme partie-------------")
